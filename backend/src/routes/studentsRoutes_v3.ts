@@ -3,11 +3,11 @@ import { zStudentPostBody, zStudentId, zStudentPutBody } from "../libs/zodValida
 
 import type { Student, CustomRequest } from "../libs/types.js";
 
-import { authenticateToken } from "../middlewares/authenMiddleware";
-import { checkRoleAdmin } from "../middlewares/checkRoleAdminDBMiddleware";
-import { checkRoles } from "../middlewares/checkRolesDBMiddleware";
+import { authenticateToken } from "../middlewares/authenMiddleware.js";
+import { checkRoleAdmin } from "../middlewares/checkRoleAdminDBMiddleware.js";
+import { checkRoles } from "../middlewares/checkRolesDBMiddleware.js";
 
-import { PrismaClient } from "../../generated/prisma/client";
+import { PrismaClient } from "../../generated/prisma/client.js";
 const prisma = new PrismaClient();
 
 const router = Router();
